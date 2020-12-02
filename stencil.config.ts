@@ -1,7 +1,11 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'stencil-sg-virtual-2020',
+  plugins: [
+    sass(),
+  ],
   outputTargets: [
     {
       type: 'dist',
