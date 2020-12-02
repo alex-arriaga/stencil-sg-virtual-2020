@@ -21,21 +21,11 @@ export class SgCardList {
   }
 
   getDataAndModifyState() {
-    // This data will come from an enternal API later!
-    const data = [
-      {
-        title: 'Taller: Creación de Componentes Web re-usables con StencilJS (compatibles con React Vue y Angular)',
-        time: '12:00 - 13:30',
-        speakers: ['Alex Arriaga'],
-      },
-      {
-        title: 'Aplicando principios SOLID en Javascript gracias a Typescript',
-        time: '13:30 - 14:15',
-        speakers: ['Leonardo Micheloni'],
-      },
-    ];
+    const apiURL = 'http://localhost:3000/items';
 
-    this.items = data;
+    fetch(apiURL).then(response => response.json()).then(data => {
+      this.items = data;
+    });
   }
 
   componentWillLoad() {

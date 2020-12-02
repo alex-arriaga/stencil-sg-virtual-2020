@@ -11,6 +11,10 @@ export class SgCard {
   @Prop() time;
   @Prop() speakers;
 
+  hasSpeakers(speakers) {
+    return Array.isArray(speakers) && speakers.length > 0;
+  }
+
   render() {
     return (
       <div class="sg-card">
@@ -19,7 +23,7 @@ export class SgCard {
           <a href="#" class="sg-card__title">
             <h3>{this.cardTitle}</h3>
           </a>
-          <h6 class="sg-card__speakers">Por {this.speakers}</h6>
+          {this.hasSpeakers(this.speakers) ? <h6 class="sg-card__speakers">Por {this.speakers}</h6> : ''}
         </div>
       </div>
     );
