@@ -21,6 +21,9 @@ export namespace Components {
         "middle": string;
     }
     interface SgCard {
+        "cardTitle": any;
+        "speakers": any;
+        "time": any;
     }
 }
 declare global {
@@ -57,6 +60,9 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface SgCard {
+        "cardTitle"?: any;
+        "speakers"?: any;
+        "time"?: any;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sg-card',
@@ -7,15 +7,19 @@ import { Component, h } from '@stencil/core';
 })
 export class SgCard {
 
+  @Prop() cardTitle;
+  @Prop() time;
+  @Prop() speakers;
+
   render() {
     return (
       <div class="sg-card">
-        <div class="sg-card__time">12:00 - 13:30</div>
+        <div class="sg-card__time">{this.time}</div>
         <div class="sg-card__content">
           <a href="#" class="sg-card__title">
-            <h3>Taller: Creación de Componentes Web re-usables con StencilJS (compatibles con React Vue y Angular)</h3>
+            <h3>{this.cardTitle}</h3>
           </a>
-          <h6 class="sg-card__speakers">Por Alex Arriaga</h6>
+          <h6 class="sg-card__speakers">Por {this.speakers}</h6>
         </div>
       </div>
     );
