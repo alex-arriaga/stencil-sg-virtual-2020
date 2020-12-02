@@ -1,12 +1,16 @@
-body {
-  background-color: #dee7e7 !important;
-}
-
 $primary-color: #8dc63f;
 $bg-color: #f8f9fa;
 
+:host {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 .sg-card {
-  background-color: #f8f9fa;
+  background-color: $bg-color;
   box-shadow: 0 15px 38px 0 rgba(0, 0, 0, .1);
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -16,16 +20,22 @@ $bg-color: #f8f9fa;
 
   a {
     color: black;
+    background-color: white;
+    text-decoration: none;
 
     &:hover {
       color: $primary-color;
     }
   }
 
-  &__title {
+  h3, h6 {
     margin-bottom: .5rem;
+    margin-top: 0;
     font-weight: 500;
     line-height: 1.2;
+  }
+
+  h3  {
     font-size: 1.75rem;
   }
 
@@ -38,5 +48,9 @@ $bg-color: #f8f9fa;
 
   &__content {
     flex-basis: 75%;
+  }
+
+  &__speakers {
+    font-size: 1rem;
   }
 }

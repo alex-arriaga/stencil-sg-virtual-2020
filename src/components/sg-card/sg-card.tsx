@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'sg-card',
   styleUrl: 'sg-card.scss',
-  shadow: false,
+  shadow: true,
 })
 export class SgCard {
 

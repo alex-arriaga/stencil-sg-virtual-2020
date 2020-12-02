@@ -3,6 +3,7 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'stencil-sg-virtual-2020',
+  globalStyle: 'src/global/styles/main.scss',
   plugins: [
     sass(),
   ],
