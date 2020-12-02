@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "title": "Taller: Creación de Componentes Web re-usables con StencilJS (compatibles con React Vue y Angular)",
+      "time": "12:00 - 13:30",
+      "speakers": [
+        "Alex Arriaga"
+      ]
+    },
+    {
+      "title": "Aplicando principios SOLID en Javascript gracias a Typescript",
+      "time": "13:30 - 14:15",
+      "speakers": [
+        "Leonardo Micheloni"
+      ]
+    },
+    {
+      "title": "Hola Mundo del Internet de las Cosas",
+      "time": "14:15 - 15:00",
+      "speakers": [
+        "Edwin Castañeda"
+      ]
+    },
+    {
+      "title": "Estructuras de datos avanzadas: Casos de uso reales",
+      "time": "15:00 - 15:45",
+      "speakers": [
+        "Nelson González"
+      ]
+    },
+    {
+      "title": "Cierre y Rifa",
+      "time": "15:45 - 16:30",
+      "speakers": null
+    }
+  ]
+}

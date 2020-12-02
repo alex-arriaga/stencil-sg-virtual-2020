@@ -19,13 +19,15 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "api:serve": "json-server --watch fixtures/db.json"
   },
   "dependencies": {
     "@stencil/core": "^2.0.1"
   },
   "license": "MIT",
   "devDependencies": {
-    "@stencil/sass": "^1.4.1"
+    "@stencil/sass": "^1.4.1",
+    "json-server": "^0.16.3"
   }
 }
