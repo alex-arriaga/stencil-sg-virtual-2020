@@ -25,6 +25,8 @@ export namespace Components {
         "speakers": any;
         "time": any;
     }
+    interface SgCardList {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -39,9 +41,16 @@ declare global {
         prototype: HTMLSgCardElement;
         new (): HTMLSgCardElement;
     };
+    interface HTMLSgCardListElement extends Components.SgCardList, HTMLStencilElement {
+    }
+    var HTMLSgCardListElement: {
+        prototype: HTMLSgCardListElement;
+        new (): HTMLSgCardListElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "sg-card": HTMLSgCardElement;
+        "sg-card-list": HTMLSgCardListElement;
     }
 }
 declare namespace LocalJSX {
@@ -64,9 +73,12 @@ declare namespace LocalJSX {
         "speakers"?: any;
         "time"?: any;
     }
+    interface SgCardList {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "sg-card": SgCard;
+        "sg-card-list": SgCardList;
     }
 }
 export { LocalJSX as JSX };
@@ -75,6 +87,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sg-card": LocalJSX.SgCard & JSXBase.HTMLAttributes<HTMLSgCardElement>;
+            "sg-card-list": LocalJSX.SgCardList & JSXBase.HTMLAttributes<HTMLSgCardListElement>;
         }
     }
 }
